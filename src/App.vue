@@ -1,35 +1,36 @@
 <template>
-  <Header msg="Vniverse Xperience"/>
-  <div id="header">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class= "app">
+    <router-view/>
   </div>
-  <router-view/>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
 
-export default {
-  name : 'Home',
-  components: {
-    Header
-  }
-}
 </script>
 
 
 <style>
-html {
-  background: no-repeat #03A688 30% url("../src/assets/texture.jpg");
-}
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+body {
+  height : 100% ;
+  margin : 0;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  background: no-repeat left top url("../src/assets/texture.jpg");
+  position: relative;
+}
+
+body:before{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+  background: radial-gradient(ellipse,#03A688,#020C0E)
+
 }
 
 #header {
@@ -44,4 +45,5 @@ html {
 #header a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>

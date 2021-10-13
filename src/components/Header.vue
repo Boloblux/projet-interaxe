@@ -1,42 +1,53 @@
 <template>
-  <div id="header-wrapper">
-    <div id="header">
-      <h1 @click="increment">C'est le header {{ total }} </h1>
-      <img alt="Logo" src="@/assets/logo.png">
+  <div id="header">
+    <router-link to="/"><img class ="logo" :src="require('@/assets/logo.png')" alt = "Logo Vniverse Xprerience"></router-link>
+    <div id="header-right">
+      <router-link to="/jeu">Jouer </router-link>
+      <router-link to="/boutique">Boutique </router-link>
+      <router-link to="/contact">Contact </router-link>
     </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Header',
-  data(){
-    return {
-      total :0
-    }
-  },
-  methods: {
-    increment() {
-      this.total += 1;
-    }
-  },
-}
+
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+#header {
+  overflow: hidden;
+  font : helvetica ;
+  padding: 2em 3em;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+#header .logo {
+  width: 5em;
+  height: auto;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+#header-right a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
 }
-a {
-  color: #42b983;
+
+#header-right a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#header-right a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#header-right {
+  float: right;
 }
 </style>

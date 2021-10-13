@@ -8,10 +8,20 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/boutique',
+    name: 'Boutique',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Boutique.vue')
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
+  },
+  {
+    path: '/jeu',
+    name: 'Jeu',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Jeu.vue')
+  },
 ]
 
 const router = createRouter({
