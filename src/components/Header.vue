@@ -18,7 +18,7 @@
 #header {
   overflow: hidden;
   font : helvetica ;
-  padding: 2em 3em;
+  padding: 1.5em 3em;
 }
 
 #header .logo {
