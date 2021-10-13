@@ -1,4 +1,5 @@
 <template>
+  <Header msg="Vniverse Xperience"/>
   <div id="header">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
@@ -6,7 +7,23 @@
   <router-view/>
 </template>
 
+<script>
+import Header from '@/components/Header.vue'
+
+export default {
+  name : 'Home',
+  components: {
+    Header
+  }
+}
+</script>
+
+
 <style>
+html {
+  background: no-repeat #03A688 30% url("../src/assets/texture.jpg");
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

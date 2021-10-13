@@ -1,15 +1,25 @@
 <template>
-  <div class="hello">
-    <img alt="Logo" src="@/assets/logo.png">
+  <div id="header-wrapper">
+    <div id="header">
+      <h1 @click="increment">C'est le header {{ total }} </h1>
+      <img alt="Logo" src="@/assets/logo.png">
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Header',
-  props: {
-    msg: String
-  }
+  data(){
+    return {
+      total :0
+    }
+  },
+  methods: {
+    increment() {
+      this.total += 1;
+    }
+  },
 }
 </script>
 
