@@ -10,13 +10,26 @@
 
 
 <style>
+@font-face {
+    font-family: 'Ringbearer Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Ringbearer Medium'), url('../src/assets/fonts/RINGM___.woff') format('woff');
+}
+@font-face {
+    font-family: 'Alegreya Sans SC Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Alegreya Sans SC Regular'), url('../src/assets/fonts/AlegreyaSansSC-Regular.woff') format('woff');
+}
+
 body {
   height : 100% ;
   margin : 0;
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: no-repeat left top url("../src/assets/texture.jpg");
+  background: transparent no-repeat url("../src/assets/texture.jpg") 0% 0% padding-box;
+  opacity: 0.2;
   position: relative;
 }
 
@@ -46,4 +59,15 @@ body:before{
   color: #42b983;
 }
 
+h1{
+  font-family: 'Ringbearer Medium';
+  font-weight:normal;
+  font-size:2em;
+}
+
+p{
+  font-family: 'Alegreya Sans SC Regular';
+  font-weight: normal;
+  font-size: 0.9em;
+}
 </style>

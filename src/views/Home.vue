@@ -61,14 +61,6 @@ export default {
   color: white;
 }
 
-h1{
-  font-size: 2em;
-}
-
-p{
-  font-size: 0.9em;
-}
-
 button{
   background-color :#0A3D44;
   color: white;
