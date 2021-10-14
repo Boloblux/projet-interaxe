@@ -1,10 +1,10 @@
 <template>
-  <div class="jeu">
+  <div class="choixjoueur">
       <Header/>
       <div class="content">
         <div class="buttons">
-          <router-link to="/choixjoueur"><button>JE SUIS JOUEUR</button></router-link>
-          <router-link to="/script"><button>JE SUIS GAMEMASTER</button></router-link>
+            <router-link to="/jeuj1"><button>JE SUIS JOUEUR 1</button></router-link>
+            <router-link to="/jeuj2"><button>JE SUIS JOUEUR 2</button></router-link>
         </div>
       </div>
       <Footer/>
@@ -16,7 +16,7 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
-  name : 'Jeu',
+  name : 'Choixjoueur',
   components: {
     Header, Footer
   }
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style scoped>
-.jeu {
+.choixjoueur {
 	min-height:100vh;
 	display:flex; 
 	flex-direction:column;

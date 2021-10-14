@@ -11,6 +11,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat hendrerit mauris in scelerisque. Vivamus ac auctor lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ultricies, neque eget consectetur vehicula, lectus sapien luctus erat, quis placerat magna sapien nec erat. Praesent at erat tempor, elementum sem nec, lobortis nisl. Proin vestibulum, eros in dignissim mollis, lacus sapien pharetra nibh, a consequat risus risus eu enim. Integer semper felis sed est facilisis, sed scelerisque orci tincidunt. Pellentesque dignissim sem vel dui placerat mattis. Morbi interdum, quam nec porttitor ornare, nibh nibh blandit metus, quis volutpat ante metus sit amet tellus.</p>
           <router-link to="/jeu"><button>Découvrir</button></router-link>
         </div>
+        <div></div>
         <div>
           <img :src="require('@/assets/horror.jpg')" alt = "Ambiance">
         </div>
@@ -18,11 +19,19 @@
       <div class="univers">
         <h1>II - L'univers de Cthulhu</h1>
         <div id="universtext">
+          <img :src="require('@/assets/cthulhu.png')" alt = "Cthulhu">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat hendrerit mauris in scelerisque. Vivamus ac auctor lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ultricies, neque eget consectetur vehicula, lectus sapien luctus erat, quis placerat magna sapien nec erat. Praesent at erat tempor, elementum sem nec, lobortis nisl. Proin vestibulum, eros in dignissim mollis, lacus sapien pharetra nibh, a consequat risus risus eu enim. Integer semper felis sed est facilisis, sed scelerisque orci tincidunt. Pellentesque dignissim sem vel dui placerat mattis. Morbi interdum, quam nec porttitor ornare, nibh nibh blandit metus, quis volutpat ante metus sit amet tellus.</p>
         </div>
       </div>
       <div class="qui">
-
+        <h1>III - Qui sommes-nous ?</h1>
+        <div id="quitext">
+          <img :src="require('@/assets/horror.jpg')" alt = "Ambiance">
+          <div id="quicomponent">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat hendrerit mauris in scelerisque. Vivamus ac auctor lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ultricies, neque eget consectetur vehicula, lectus sapien luctus erat, quis placerat magna sapien nec erat. Praesent at erat tempor, elementum sem nec, lobortis nisl. Proin vestibulum, eros in dignissim mollis, lacus sapien pharetra nibh, a consequat risus risus eu enim. Integer semper felis sed est facilisis, sed scelerisque orci tincidunt. Pellentesque dignissim sem vel dui placerat mattis. Morbi interdum, quam nec porttitor ornare, nibh nibh blandit metus, quis volutpat ante metus sit amet tellus.</p>
+            <router-link to="/contact"><button>Nous contacter</button></router-link>
+          </div>
+        </div>
       </div>
     </div>
     <Footer/>
@@ -48,12 +57,8 @@ export default {
 	flex-direction:column;
 }
 .content {
-  /*margin: -2em 2em 2em;*/
+  margin: -2em 2em 2em;
   color: white;
-}
-
-.content div{
-  /*margin: 1em;*/
 }
 
 h1{
@@ -64,9 +69,25 @@ p{
   font-size: 0.9em;
 }
 
+button{
+  background-color :#0A3D44;
+  color: white;
+  padding: 0.3em 2.3em;
+  border: none;
+  border-radius: 0.3em ;
+  font-size: 0.9em;
+  box-shadow: 0 6px 15px black;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color :#1A3940;
+}
+
 .image{
   display: flex ;
   justify-content: center;
+  margin: 2em 0;
 }
 
 .image img{
@@ -78,24 +99,10 @@ p{
 .escape{
   width: 100%;
   display: inline-grid;
-  grid-template-columns: 65% 35%;
-  justify-content: space-between;
+  grid-template-columns: 60% 5% 35%;
+  justify-content: space-around;
   align-items: center; 
-}
-
-.escape button{
-  background-color :#0A3D44;
-  color: white;
-  padding: 0.3em 2.3em;
-  border: none;
-  border-radius: 0.3em ;
-  font-size: 0.9em;
-  box-shadow: 0 6px 15px black;
-  cursor: pointer;
-}
-
-.escape button:hover{
-  background-color :#1A3940;
+  margin: 2em 0;
 }
 
 .escape img{
@@ -103,16 +110,60 @@ p{
 }
 
 .univers{
-
+  margin: 2em 0;
 }
 
 #universtext{
+  position: relative;
+  text-align: center;
+}
+
+#universtext img{
+  width : 100%;
+  z-index: -1;
+}
+
+#universtext p{
+  position: absolute;
+  top: 0%;
+  left: 65%;
+  margin-right: 2%;
+}
+
+/*#universtext{
   background-size: cover;
   background-image: url('../assets/cthulhu.png');
   background-origin: border-box;
   background-repeat: no-repeat;
   height: 0;
   padding-top: 37.54%;
+}*/
+
+.qui{
+  margin: 2em 0;
+}
+
+#quitext{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-auto-rows: auto;
+}
+
+#quitext img{
+  width: 100%;
+  grid-column: 1 / 5;
+  grid-row: 1 / 8;
+}
+
+#quicomponent{
+  background-color: rgba(73, 153, 160, 0.5);;
+  padding: 2em;
+  grid-column: 3 / 7;
+  grid-row: 2 / 10;
+}
+
+#quitext p{
+  color: white;;
 }
 
 @media only screen and (max-width: 768px){
@@ -126,6 +177,10 @@ p{
   .escape img{
   width: 70%;
   }
+
+  #universtext p{
+  position: relative;
+}
 }
 
 </style>
