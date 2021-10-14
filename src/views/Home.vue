@@ -13,7 +13,7 @@
         </div>
         <div></div>
         <div>
-          <img :src="require('@/assets/horror.jpg')" alt = "Ambiance">
+          <img :src="require('@/assets/horror.png')" alt = "Ambiance">
         </div>
       </div>
       <div class="univers">
@@ -26,7 +26,7 @@
       <div class="qui">
         <h1>III - Qui sommes-nous ?</h1>
         <div id="quitext">
-          <img :src="require('@/assets/horror.jpg')" alt = "Ambiance">
+          <img :src="require('@/assets/horrorB.png')" alt = "Ambiance">
           <div id="quicomponent">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat hendrerit mauris in scelerisque. Vivamus ac auctor lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ultricies, neque eget consectetur vehicula, lectus sapien luctus erat, quis placerat magna sapien nec erat. Praesent at erat tempor, elementum sem nec, lobortis nisl. Proin vestibulum, eros in dignissim mollis, lacus sapien pharetra nibh, a consequat risus risus eu enim. Integer semper felis sed est facilisis, sed scelerisque orci tincidunt. Pellentesque dignissim sem vel dui placerat mattis. Morbi interdum, quam nec porttitor ornare, nibh nibh blandit metus, quis volutpat ante metus sit amet tellus.</p>
             <router-link to="/contact"><button>Nous contacter</button></router-link>

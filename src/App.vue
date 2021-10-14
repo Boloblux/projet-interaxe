@@ -26,10 +26,11 @@
 body {
   height : 100% ;
   margin : 0;
+  font-family: 'Alegreya Sans SC Regular';
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: transparent no-repeat url("../src/assets/texture.jpg") 0% 0% padding-box;
-  opacity: 0.2;
+  background: transparent no-repeat url("../src/assets/texture.jpg") 0% 100% padding-box;
   position: relative;
 }
 
@@ -41,7 +42,7 @@ body:before{
   left: 0;
   bottom: 0;
   right: 0;
-  opacity: 0.5;
+  opacity: 0.8;
   background: radial-gradient(ellipse,#03A688,#020C0E)
 
 }
@@ -69,5 +70,10 @@ p{
   font-family: 'Alegreya Sans SC Regular';
   font-weight: normal;
   font-size: 0.9em;
+}
+
+button{
+  font-family: 'Alegreya Sans SC Regular';
+  font-weight: normal;
 }
 </style>
