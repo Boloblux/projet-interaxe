@@ -1,10 +1,10 @@
 <template>
   <div class="script">
-    <Header/>
-    <div class="content">
-      ICI YA LE SCRIPT ET TOUT
-    </div>
-    <Footer/>
+      <Header/>
+        <div class="content">
+            <img :src="require('@/assets/Script.jpg')"/>
+        </div>
+      <Footer/>
   </div>
 </template>
 
@@ -13,10 +13,10 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
-  name : 'Script',
-  components: {
-    Header, Footer
-  }
+    name : 'Script',
+    components: {
+        Header, Footer,
+    },
 }
 </script>
 
@@ -26,9 +26,14 @@ export default {
 	display:flex; 
 	flex-direction:column;
 }
-.content {
-    margin: 5em 2em 2em;
-    color: white;
-    flex-grow: 1;
+
+
+img{
+    width: 100%;
+    text-align:center ;
+    margin:auto ;
+    display:flex ;
+    flex-direction: column;
+    gap: 2em;
 }
 </style>

@@ -2,7 +2,7 @@
   <div id="header">
     <router-link to="/"><img class ="logo" :src="require('@/assets/logo.png')" alt = "Logo Vniverse Xprerience"></router-link>
     <div id="header-right">
-      <router-link to="/jeu">Jouer </router-link>
+      <a v-on:click="accesProtege()">Jouer </a>
       <router-link to="/boutique">Boutique </router-link>
       <router-link to="/contact">Contact </router-link>
     </div>
@@ -11,13 +11,24 @@
 </template>
 
 <script>
-
+export default {
+  methods: {
+    accesProtege: function () {
+      var valeur = prompt("Pour déverrouiller la page de jeu rendez-vous sur Instagram dans notre story. Résolvez l’énigme elle vous servira de mot de passe Pour accéder à l'énigme si vous n'avez pas le mot de passe, appuyer sur valider (Le mot de passe est en minuscule)", "");
+      if (valeur == "experience"){
+        self.location.href="/#/jeu"
+      }
+      else {
+        window.open('https://instagram.com/vniverse_xperience_game?utm_medium=copy_link', '_blank').focus();
+      }
+    }
+	}
+}
 </script>
 
 <style scoped>
 #header {
   overflow: hidden;
-  font : helvetica ;
   padding: 1.5em 3em;
 }
 

@@ -2,17 +2,35 @@
   <div class="jeuj1">
       <Header/>
       <div class="content">
-            <div>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" >
+            <div id="images">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" id="imagechange">
 	                <image width="1920" height="1080" xlink:href="../assets/pièce3.png"></image>
-                    <rect id="clickzone" x="790" y="350" fill="#fff" opacity="0" width="275" height="350" onclick="alert('Ceci est une bannière')"/>
+                    <router-link to="/j1image1" target= '_blank'><rect id="clickzone" x="790" y="350" fill="#fff" opacity="0" width="275" height="350"/></router-link>
+                </svg>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" id="imagechange">
+	                <image width="1920" height="1080" xlink:href="../assets/pièce3_2.png"></image>
+                    <router-link to="/j1image2" target= '_blank'><rect id="clickzone" x="650" y="800" fill="#fff" opacity="0" width="150" height="75"/></router-link>
                 </svg>
             </div>
-            <div><p class="enigme">Salut c'est moi l'énigme <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat hendrerit mauris in scelerisque. Vivamus ac auctor lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ultricies, neque eget consectetur vehicula, lectus sapien luctus erat, quis placerat magna sapien nec erat. Praesent at erat tempor, elementum sem nec, lobortis nisl. Proin vestibulum, eros in dignissim mollis, lacus sapien pharetra nibh, a consequat risus risus eu enim. Integer semper felis sed est facilisis, sed scelerisque orci tincidunt. Pellentesque dignissim sem vel dui placerat mattis. Morbi interdum, quam nec porttitor ornare, nibh nibh blandit metus, quis volutpat ante metus sit amet tellus.</p></div>
+            <div><p class="enigme">Vous venez d'être enlevé par les cultistes. Vous et vos amis avez été séparé entraidez-vous. Pour vous échappez le plus rapidement possible. Creusez vous les méninges, fouiller partout vous devriez trouvez quelque chose.</p></div>
             <div class="reponse">
-                <input id="zonetexte" type="text" minlength="3" maxlength="10" placeholder="Taper la réponse">
+                <input id="zonetexte" type="text" minlength="3" maxlength="10" placeholder="Cadenas 6 lettres majuscules">
                 <button id="bouton" v-on:click="myFunction()">VALIDER</button>
-                <div id="indice">Indice</div>
+                <div id="indice">
+                    <p id="textindice">UNLOCK</p>
+                    <div id="hidden">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" id="imagechange">
+	                        <image width="1920" height="1080" xlink:href="../assets/pièce2_2.png"></image>
+                            <router-link to="/j1image3" target= '_blank'><rect id="clickzone" x="865" y="705" fill="#fff" opacity="0" width="250" height="36"/></router-link>
+                        </svg>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" id="imagechange">
+	                        <image width="1920" height="1080" xlink:href="../assets/pièce2.png"></image>
+                            <router-link to="/j1image4" target= '_blank'><rect id="clickzone" x="1215" y="335" fill="#fff" opacity="0" width="115" height="250"/></router-link>
+                        </svg>
+                        <input id="zonetexterep" type="text" minlength="3" maxlength="10" placeholder="Cadenas 4 chiffres">
+                        <button id="bouton" v-on:click="myFonction()">VALIDER</button>
+                    </div>
+                </div>
             </div>
         </div>
       <Footer/>
@@ -26,13 +44,21 @@ import Footer from '@/components/Footer.vue'
 export default {
     name : 'JeuJ1',
     components: {
-        Header, Footer
+        Header, Footer,
     },
-    mounted() {
-        function myFunction() {
-            document.getElementById("indice").innerHTML = "Hello World";
-        }
-    },
+    methods: {
+        myFunction: function () {
+            if (document.getElementById("zonetexte").value==="CHLURJ"){
+                document.getElementById("textindice").innerHTML = "VOICI LA SUITE"
+                document.getElementById('hidden').style.visibility = "visible"
+            }
+        },
+        myFonction: function () {
+            if (document.getElementById("zonetexterep").value==="3776"){
+                self.location.href="/#/fin"
+            }
+        },
+    }
 }
 </script>
 
@@ -66,7 +92,16 @@ img{
     margin-bottom: 1em;
 }
 
-button{
+#zonetexterep{
+    width: 100%;
+    font-size: 1.3em;
+    height: 2em;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#bouton{
     background-color :#0A3D44;
     color: white;
     width: 100%;
@@ -78,26 +113,46 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+#bouton:hover{
   background-color :#1A3940;
+}
+
+area{
+    cursor: pointer;
+}
+
+#images{
+    text-align:center ;
+    margin:auto ;
+    display:flex ;
+    flex-direction: column;
+    gap: 2em;
+    width: 90%;
 }
 
 #indice{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: solid #0A3D44;
     border-radius: 0.3em;
-    height: 3em;
+    width: 100%;
+    height: auto;
+}
+
+#hidden{
+    visibility: hidden;
+    width: 90%;
 }
 
 #clickzone{
     transition: .6s fill;
-    fill: #1A3940;
+    fill: yellow;
 }
 
 #clickzone:hover{
-    fill: #0A3D44;
-    opacity: 0.6;
+    fill: yellow;
+    opacity: 0.3;
 }
 </style>

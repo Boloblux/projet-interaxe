@@ -3,8 +3,8 @@
       <Header/>
       <div class="content">
         <div class="buttons">
-            <router-link to="/jeuj1"><button>JE SUIS JOUEUR 1</button></router-link>
-            <router-link to="/jeuj2"><button>JE SUIS JOUEUR 2</button></router-link>
+            <router-link to="/jeuj1"><button>JOUEUR 1</button></router-link>
+            <router-link to="/jeuj2"><button>JOUEUR 2</button></router-link>
         </div>
       </div>
       <Footer/>

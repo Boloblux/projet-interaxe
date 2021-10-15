@@ -1,10 +1,10 @@
 <template>
   <div class="boutique">
-    <Header/>
-    <div class="content">
-      
-    </div>
-    <Footer/>
+      <Header/>
+        <div class="content">
+            <img :src="require('@/assets/Shop.jpg')"/>
+        </div>
+      <Footer/>
   </div>
 </template>
 
@@ -13,10 +13,10 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
-  name : 'Boutique',
-  components: {
-    Header, Footer
-  }
+    name : 'Boutique',
+    components: {
+        Header, Footer,
+    },
 }
 </script>
 
@@ -26,7 +26,14 @@ export default {
 	display:flex; 
 	flex-direction:column;
 }
-.content {
-  flex-grow: 1;
+
+
+img{
+    width: 100%;
+    text-align:center ;
+    margin:auto ;
+    display:flex ;
+    flex-direction: column;
+    gap: 2em;
 }
 </style>

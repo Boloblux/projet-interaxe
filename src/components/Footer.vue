@@ -1,9 +1,9 @@
 <template>
   <div id="footer">
     <div id="footer-right">
-      <router-link to="/jeu"><img :src="require('@/assets/instagram.png')" alt = "Logo Instagram"></router-link>
-      <router-link to="/boutique">Boutique </router-link>
-      <router-link to="/contact">Contact </router-link>
+      <a href="https://www.tiktok.com/@vniverse_experiencegame"><img :src="require('@/assets/tiktok.png')" alt = "Logo Tiktok"></a>
+      <a href="https://www.instagram.com/vniverse_xperience_game"><img :src="require('@/assets/instagram.png')" alt = "Logo Instagram"> </a>
+      <a href="https://www.youtube.com/channel/UCckO_2hcQdhdnci7IEHUskg"><img :src="require('@/assets/youtube.png')" alt = "Logo Youtube"> </a>
     </div>
   </div>
 </template>
@@ -20,6 +20,9 @@
     background-color: black;
     color: white;
     text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Alegreya Sans SC Regular';
     font-weight: normal;
 }
